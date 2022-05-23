@@ -23,6 +23,11 @@ public class Client {
         this.usuari = usuari;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" + "dni=" + dni + ", nom=" + nom + ", cognom=" + cognom + ", usuari=" + usuari + '}';
+    }
+
     public String getDni() {
         return dni;
     }

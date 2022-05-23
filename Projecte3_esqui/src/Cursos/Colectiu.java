@@ -1,22 +1,30 @@
 
 package Cursos;
 
+import java.time.LocalDate;
+
 public class Colectiu extends Curs{
     
     private int max_clients;
-    private int preu;
+    private double preu;
+
+    public Colectiu(int id, String nom, String descripcio, LocalDate data, String monitor, int max_clients, double preu) {
+        super(id, nom, descripcio, data, monitor);
+        this.max_clients = max_clients;
+        this.preu = preu;
+    }
 
     public int getMax_clients() {
         return max_clients;
     }
 
-    public int getPreu() {
+    public double getPreu() {
         return preu;
     }
 
-    public Colectiu(int max_clients, int preu) {
-        this.max_clients = max_clients;
-        this.preu = preu;
+    @Override
+    public String toString() {
+        return "Colectiu{" + "max_clients=" + max_clients + ", preu=" + preu + '}';
     }
     
 }
